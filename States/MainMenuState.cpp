@@ -1,7 +1,7 @@
 #include "MainMenuState.h"
 
-MainMenuState::MainMenuState(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys):
-     State(window, supportedKeys)
+MainMenuState::MainMenuState(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::stack<State*>* states):
+     State(window, supportedKeys, states)
 {
     this->initFonts();
     this->initKeybinds();
@@ -25,7 +25,7 @@ void MainMenuState::initFonts(){
 }
 
 void MainMenuState::initKeybinds(){
-    std::ifstream ifs("Config/GameState_Keybinds.ini");
+    std::ifstream ifs("Config/MainMenu_Keybinds.ini");
 
     if(ifs.is_open()){
             std::string key = "";
@@ -70,7 +70,7 @@ void MainMenuState::updateButtons(){
     }
 
     if(this->buttons["GAME_STATE"]->isPressed()){
-        //this->states.push(new GameState(this->window, &this->supportedKeys));
+        this->states->push(new GameState(this->window, this->supportedKeys, this->states));
     }
 }
 
@@ -88,7 +88,7 @@ void MainMenuState::render(sf::RenderTarget* target){
 }
 
 void MainMenuState::endState(){
-    std::cout << "EndState\n";
+    std::cout << "Ening MainMenuState!\n";
 }
 
 void MainMenuState::updateInput(const float& dt){

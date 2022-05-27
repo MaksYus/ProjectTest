@@ -2523,14 +2523,14 @@
 1653541216 c:\users\praktika\documents\github\projecttest\include\game.h
 	<MainMenuState.h>
 
-1653546501 c:\users\praktika\documents\github\projecttest\states\mainmenustate.h
+1653644125 c:\users\praktika\documents\github\projecttest\states\mainmenustate.h
 	"GameState.h"
 	"Button.h"
 
-1653541216 c:\users\praktika\documents\github\projecttest\states\gamestate.h
+1653644370 c:\users\praktika\documents\github\projecttest\states\gamestate.h
 	"State.h"
 
-1653541216 c:\users\praktika\documents\github\projecttest\include\state.h
+1653644052 c:\users\praktika\documents\github\projecttest\include\state.h
 	"Entity.h"
 
 1653545249 c:\users\praktika\documents\github\projecttest\resourcefiles\button.h
@@ -2543,22 +2543,22 @@
 	"SFML/Graphics.hpp"
 	"SFML/Audio.hpp"
 
-1653541216 source:c:\users\praktika\documents\github\projecttest\src\game.cpp
+1653647097 source:c:\users\praktika\documents\github\projecttest\src\game.cpp
 	"Game.h"
 	<iostream>
 	<ctime>
 	<cstdlib>
 	<Game.h>
 
-1653541216 source:c:\users\praktika\documents\github\projecttest\src\state.cpp
+1653644045 source:c:\users\praktika\documents\github\projecttest\src\state.cpp
 	"State.h"
 
-1653541216 source:c:\users\praktika\documents\github\projecttest\states\gamestate.cpp
+1653644400 source:c:\users\praktika\documents\github\projecttest\states\gamestate.cpp
 	"GameState.h"
 
 1653545879 source:c:\users\praktika\documents\github\projecttest\resourcefiles\button.cpp
 	"Button.h"
 
-1653545529 source:c:\users\praktika\documents\github\projecttest\states\mainmenustate.cpp
+1653647337 source:c:\users\praktika\documents\github\projecttest\states\mainmenustate.cpp
 	"MainMenuState.h"
 
