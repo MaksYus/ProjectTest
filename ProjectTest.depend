@@ -2520,7 +2520,7 @@
 	<SFML/Graphics.hpp>
 	"Game.h"
 
-1653541216 c:\users\praktika\documents\github\projecttest\include\game.h
+1653886534 c:\users\praktika\documents\github\projecttest\include\game.h
 	<MainMenuState.h>
 
 1653644125 c:\users\praktika\documents\github\projecttest\states\mainmenustate.h
@@ -2543,7 +2543,7 @@
 	"SFML/Graphics.hpp"
 	"SFML/Audio.hpp"
 
-1653647097 source:c:\users\praktika\documents\github\projecttest\src\game.cpp
+1653887269 source:c:\users\praktika\documents\github\projecttest\src\game.cpp
 	"Game.h"
 	<iostream>
 	<ctime>
