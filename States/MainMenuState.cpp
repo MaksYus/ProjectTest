@@ -35,6 +35,9 @@ void MainMenuState::initKeybinds(){
                 this->keybinds[key] = this->supportedKeys->at(key2);
             }
     }
+    else{
+        std::cout << "ERROR! Не удалось открыть Config/MainMenu_Keybinds.ini" << std::endl;
+    }
     ifs.close();
 }
 

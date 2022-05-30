@@ -22,6 +22,9 @@ void GameState::initKeybinds(){
                 this->keybinds[key] = this->supportedKeys->at(key2);
             }
     }
+    else {
+        std::cout << "ERROR! не удалось открыть Config/GameState_Keybinds.ini" << std::endl;
+    }
     ifs.close();
 }
 

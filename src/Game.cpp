@@ -63,6 +63,9 @@ void Game::initKeys(){
                 this->supportedKeys[key] = key_value;
             }
     }
+    else {
+        std::cout << "ERROR! не удалось открыть Config/Supported_Keys.ini" << std::endl;
+    }
     ifs.close();
 }
 
