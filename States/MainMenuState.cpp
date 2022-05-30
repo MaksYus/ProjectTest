@@ -3,12 +3,12 @@
 MainMenuState::MainMenuState(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::stack<State*>* states):
      State(window, supportedKeys, states)
 {
+    this->initVariables();
+    this->initBackground();
     this->initFonts();
     this->initKeybinds();
     this->initButtons();
 
-    this->background.setSize(sf::Vector2f(window->getSize().x, window->getSize().y));
-    this->background.setFillColor(sf::Color::Magenta);
 }
 
 MainMenuState::~MainMenuState()
@@ -16,6 +16,21 @@ MainMenuState::~MainMenuState()
     for(auto& item : this->buttons)
         delete item.second;
    // delete this->gamestate_btn;
+}
+
+void MainMenuState::initVariables(){
+
+}
+
+void MainMenuState::initBackground(){
+    this->background.setSize(sf::Vector2f(static_cast<float>(this->window->getSize().x), static_cast<float>(this->window->getSize().y)));
+
+    if(this->bgTexture.loadFromFile("ResourceFiles/Images/Backgrounds/MainMenu.png")){
+        this->background.setTexture(&this->bgTexture);
+    }
+    else {
+        std::cout << "ERROR! Ќе удалось загрузить задник главного меню" << std::endl;
+    }
 }
 
 void MainMenuState::initFonts(){
