@@ -10,8 +10,7 @@ class State
         virtual ~State();
 
         const bool& getQuit() const;
-        virtual void checkForQuit();
-        virtual void endState() = 0;
+        void endState();
 
         virtual void updateMousePosition();
         virtual void updateInput(const float& dt) = 0;

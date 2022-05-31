@@ -11,8 +11,6 @@ class MainMenuState:
         MainMenuState(sf::RenderWindow* window, std::map<std::string,int>* supportedKeys, std::stack<State*>* states);
         virtual ~MainMenuState();
 
-        void endState();
-
         void updateInput(const float& dt);
         void updateButtons();
         void update(const float& dt);

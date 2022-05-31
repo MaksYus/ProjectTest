@@ -1910,10 +1910,10 @@
 1653496858 source:c:\users\usufm\desktop\projecttest\states\mainmenustate.cpp
 	"MainMenuState.h"
 
-1653541216 source:c:\users\praktika\documents\github\projecttest\entities\entity.cpp
+1653978698 source:c:\users\praktika\documents\github\projecttest\entities\entity.cpp
 	"Entity.h"
 
-1653541216 c:\users\praktika\documents\github\projecttest\entities\entity.h
+1653981016 c:\users\praktika\documents\github\projecttest\entities\entity.h
 	<iostream>
 	<ctime>
 	<cstdlib>
@@ -2523,14 +2523,14 @@
 1653887535 c:\users\praktika\documents\github\projecttest\include\game.h
 	<MainMenuState.h>
 
-1653895661 c:\users\praktika\documents\github\projecttest\states\mainmenustate.h
+1653979756 c:\users\praktika\documents\github\projecttest\states\mainmenustate.h
 	"GameState.h"
 	"Button.h"
 
-1653644370 c:\users\praktika\documents\github\projecttest\states\gamestate.h
+1653979810 c:\users\praktika\documents\github\projecttest\states\gamestate.h
 	"State.h"
 
-1653644052 c:\users\praktika\documents\github\projecttest\include\state.h
+1653979675 c:\users\praktika\documents\github\projecttest\include\state.h
 	"Entity.h"
 
 1653545249 c:\users\praktika\documents\github\projecttest\resourcefiles\button.h
@@ -2550,15 +2550,21 @@
 	<cstdlib>
 	<Game.h>
 
-1653644045 source:c:\users\praktika\documents\github\projecttest\src\state.cpp
+1653979720 source:c:\users\praktika\documents\github\projecttest\src\state.cpp
 	"State.h"
 
-1653889414 source:c:\users\praktika\documents\github\projecttest\states\gamestate.cpp
+1653979789 source:c:\users\praktika\documents\github\projecttest\states\gamestate.cpp
 	"GameState.h"
 
 1653545879 source:c:\users\praktika\documents\github\projecttest\resourcefiles\button.cpp
 	"Button.h"
 
-1653647337 source:c:\users\praktika\documents\github\projecttest\states\mainmenustate.cpp
+1653979934 source:c:\users\praktika\documents\github\projecttest\states\mainmenustate.cpp
 	"MainMenuState.h"
+
+1653978473 source:c:\users\praktika\documents\github\projecttest\entities\player.cpp
+	"Player.h"
+
+1653978393 c:\users\praktika\documents\github\projecttest\entities\player.h
+	"Entity.h"
 
