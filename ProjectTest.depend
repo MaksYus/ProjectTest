@@ -1913,7 +1913,7 @@
 1653978698 source:c:\users\praktika\documents\github\projecttest\entities\entity.cpp
 	"Entity.h"
 
-1653981016 c:\users\praktika\documents\github\projecttest\entities\entity.h
+1654063391 c:\users\praktika\documents\github\projecttest\entities\entity.h
 	<iostream>
 	<ctime>
 	<cstdlib>
@@ -2527,11 +2527,11 @@
 	"GameState.h"
 	"Button.h"
 
-1653979810 c:\users\praktika\documents\github\projecttest\states\gamestate.h
+1654067807 c:\users\praktika\documents\github\projecttest\states\gamestate.h
 	"State.h"
 
-1653979675 c:\users\praktika\documents\github\projecttest\include\state.h
-	"Entity.h"
+1654067737 c:\users\praktika\documents\github\projecttest\include\state.h
+	"Player.h"
 
 1653545249 c:\users\praktika\documents\github\projecttest\resourcefiles\button.h
 	<iostream>

@@ -4,11 +4,13 @@ GameState::GameState(sf::RenderWindow* window, std::map<std::string, int>* suppo
      State(window, supportedKeys,states)
 {
     this->initKeybinds();
+    this->initTextures();
+    this->initPlayers();
 }
 
 GameState::~GameState()
 {
-    //dtor
+    delete this->player;
 }
 
 void GameState::initKeybinds(){
@@ -31,13 +33,13 @@ void GameState::initKeybinds(){
 void GameState::update(const float& dt){
     this->updateMousePosition();
     this->updateInput(dt);
-    this->player.update(dt);
+    this->player->update(dt);
 }
 
 void GameState::render(sf::RenderTarget* target){
     if (!target)
         target = this->window;
-    this->player.render(target);
+    this->player->render(target);
 }
 
 
@@ -45,13 +47,24 @@ void GameState::updateInput(const float& dt){
 
     //Update player Input
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("MOVE_UP"))))
-            this->player.move(dt, 0.f, -1.f);
+            this->player->move(dt, 0.f, -1.f);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("MOVE_DOWN"))))
-            this->player.move(dt, 0.f, 1.f);
+            this->player->move(dt, 0.f, 1.f);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("MOVE_LEFT"))))
-            this->player.move(dt, -1.f, 0.f);
+            this->player->move(dt, -1.f, 0.f);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("MOVE_RIGHT"))))
-            this->player.move(dt, 1.f, 0.f);
+            this->player->move(dt, 1.f, 0.f);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("CLOSE"))))
             this->endState();
+}
+
+void GameState::initTextures(){
+    sf::Texture temp;
+    if(!temp.loadFromFile("ResourceFiles\Images\Sprites\player\Dwarf1.png"))
+        std::cout << "ERROR! cun't load texture player" << std::endl;
+    this->textures["PLAYER_IDLE"] = temp;
+}
+
+void GameState::initPlayers(){
+    this->player = new Player(0, 0, &this->textures["PLAYER_IDLE"]);
 }

@@ -27,7 +27,7 @@ class Entity
         virtual void update(const float& dt );
         virtual void render(sf::RenderTarget* target);
 
-        //virtual void setPosition(const float x, const float y);
+        virtual void setPosition(const float x, const float y);
         virtual void move(const float& dt, const float x, const float y);
     protected:
         sf::Sprite* sprite;

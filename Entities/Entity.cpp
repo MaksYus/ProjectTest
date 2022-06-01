@@ -27,7 +27,13 @@ void Entity::initVariables(){
 
 void Entity::createSprite(sf::Texture* texture){
     this->texture = texture;
-    this->sprite->setTexture(*this->texture);
+    this->sprite = new sf::Sprite(*this->texture);
+}
+
+void Entity::setPosition(const float x, const float y){
+     if(this->sprite){
+           this->sprite->setPosition(x, y);
+    }
 }
 
 void Entity::move(const float& dt, const float dir_x, const float dir_y){

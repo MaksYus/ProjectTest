@@ -15,9 +15,11 @@ class GameState : public State
     protected:
 
     private:
-        Entity player;
+        Player *player;
 
         void initKeybinds();
+        void initTextures();
+        void initPlayers();
 };
 
 #endif // GAMESTATE_H
