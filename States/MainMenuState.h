@@ -25,6 +25,7 @@ class MainMenuState:
         sf::Texture bgTexture;
 
         std::map<std::string, Button*> buttons;
+        std::map<std::string, Button*>::iterator it = buttons.begin();
 
         void initVariables();
         void initBackground();

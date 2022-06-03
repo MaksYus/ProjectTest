@@ -1910,23 +1910,11 @@
 1653496858 source:c:\users\usufm\desktop\projecttest\states\mainmenustate.cpp
 	"MainMenuState.h"
 
-1653978698 source:c:\users\praktika\documents\github\projecttest\entities\entity.cpp
+1654238902 source:c:\users\praktika\documents\github\projecttest\entities\entity.cpp
 	"Entity.h"
 
-1654063391 c:\users\praktika\documents\github\projecttest\entities\entity.h
-	<iostream>
-	<ctime>
-	<cstdlib>
-	<vector>
-	<stack>
-	<map>
-	<fstream>
-	<sstream>
-	"SFML/System.hpp"
-	"SFML/Window.hpp"
-	"SFML/Graphics.hpp"
-	"SFML/Audio.hpp"
-	"SFML/Network.hpp"
+1654241292 c:\users\praktika\documents\github\projecttest\entities\entity.h
+	<MovementComponent.h>
 
 1653541216 c:\users\praktika\documents\github\projecttest\sfml-2.5.1\include\sfml\system.hpp
 	<SFML/Config.hpp>
@@ -2523,7 +2511,7 @@
 1653887535 c:\users\praktika\documents\github\projecttest\include\game.h
 	<MainMenuState.h>
 
-1653979756 c:\users\praktika\documents\github\projecttest\states\mainmenustate.h
+1654239151 c:\users\praktika\documents\github\projecttest\states\mainmenustate.h
 	"GameState.h"
 	"Button.h"
 
@@ -2553,18 +2541,36 @@
 1653979720 source:c:\users\praktika\documents\github\projecttest\src\state.cpp
 	"State.h"
 
-1653979789 source:c:\users\praktika\documents\github\projecttest\states\gamestate.cpp
+1654238911 source:c:\users\praktika\documents\github\projecttest\states\gamestate.cpp
 	"GameState.h"
 
 1653545879 source:c:\users\praktika\documents\github\projecttest\resourcefiles\button.cpp
 	"Button.h"
 
-1653979934 source:c:\users\praktika\documents\github\projecttest\states\mainmenustate.cpp
+1654239167 source:c:\users\praktika\documents\github\projecttest\states\mainmenustate.cpp
 	"MainMenuState.h"
 
-1653978473 source:c:\users\praktika\documents\github\projecttest\entities\player.cpp
+1654241484 source:c:\users\praktika\documents\github\projecttest\entities\player.cpp
 	"Player.h"
 
 1653978393 c:\users\praktika\documents\github\projecttest\entities\player.h
 	"Entity.h"
+
+1654240704 c:\users\praktika\documents\github\projecttest\components\movementcomponent.h
+	<iostream>
+	<ctime>
+	<cstdlib>
+	<vector>
+	<stack>
+	<map>
+	<fstream>
+	<sstream>
+	"SFML/System.hpp"
+	"SFML/Window.hpp"
+	"SFML/Graphics.hpp"
+	"SFML/Audio.hpp"
+	"SFML/Network.hpp"
+
+1654241025 source:c:\users\praktika\documents\github\projecttest\components\movementcomponent.cpp
+	"MovementComponent.h"
 

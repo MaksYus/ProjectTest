@@ -13,8 +13,8 @@ MainMenuState::MainMenuState(sf::RenderWindow* window, std::map<std::string, int
 
 MainMenuState::~MainMenuState()
 {
-    for(auto& item : this->buttons)
-        delete item.second;
+    for (int i = 0; this->it != this->buttons.end(); this->it++, i++)
+        delete this->it->second;
    // delete this->gamestate_btn;
 }
 
@@ -84,9 +84,10 @@ void MainMenuState::update(const float& dt){
 }
 
 void MainMenuState::updateButtons(){
-    for(auto &item : this->buttons){
-        item.second->update(this->mousePosView);
-    }
+
+    this->it = this->buttons.begin();
+    for (int i = 0; this->it != this->buttons.end(); this->it++, i++)
+        this->it->second->update(this->mousePosView);
 
     if(this->buttons["EXIT_STATE"]->isPressed()){
         this->endState();
@@ -98,9 +99,9 @@ void MainMenuState::updateButtons(){
 }
 
 void MainMenuState::renderButtons(sf::RenderTarget* target){
-    for(auto &item : this->buttons){
-        item.second->render(target);
-    }
+    this->it = this->buttons.begin();
+    for (int i = 0; this->it != this->buttons.end(); this->it++, i++)
+        this->it->second->render(target);
 }
 
 void MainMenuState::render(sf::RenderTarget* target){
@@ -123,8 +124,8 @@ void MainMenuState::render(sf::RenderTarget* target){
 
 void MainMenuState::updateInput(const float& dt){
 
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("CLOSE"))))
-            this->endState();
+   // if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("CLOSE"))))
+   //         this->endState();
   //  if(sf::Keyboard::isKeyPressed(sf::Keyboard::G))
 
 }

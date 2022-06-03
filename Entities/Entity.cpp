@@ -22,12 +22,16 @@ void Entity::render(sf::RenderTarget* target){
 void Entity::initVariables(){
     this->sprite = NULL;
     this->texture = NULL;
-    this->movementSpeed = 100.f;
+    this->movementComponent = NULL;
 }
 
 void Entity::createSprite(sf::Texture* texture){
     this->texture = texture;
     this->sprite = new sf::Sprite(*this->texture);
+}
+
+void Entity::createMovementComponent(const float maxVelocity){
+    this->movementComponent = new MovementComponent(maxVelocity);
 }
 
 void Entity::setPosition(const float x, const float y){
@@ -37,8 +41,9 @@ void Entity::setPosition(const float x, const float y){
 }
 
 void Entity::move(const float& dt, const float dir_x, const float dir_y){
-    if(this->sprite){
-           this->sprite->move(dir_x * this->movementSpeed * dt,dir_y * this->movementSpeed * dt);
+    if(this->sprite && this->movementComponent){
+            this->movementComponent->move(dir_x,dir_y);
+           this->sprite->move(this->movementComponent->getVelocity() * dt);
     }
 }
 
