@@ -1,11 +1,11 @@
 #include "Player.h"
 
-Player::Player(float x, float y, sf::Texture* texture)
+Player::Player(float x, float y, sf::Texture& texture)
 {
     this->initVariables();
     this->initComponents();
 
-    this->createSprite(texture);
+    this->setTexture(texture);
     this->setPosition(x, y);
 }
 

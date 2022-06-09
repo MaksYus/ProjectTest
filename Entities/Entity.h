@@ -10,7 +10,7 @@ class Entity
         virtual ~Entity();
 
 
-        void createSprite(sf::Texture* texture);
+        void setTexture(sf::Texture& texture);
         void createMovementComponent(const float maxVelocity);
 
         virtual void update(const float& dt );
@@ -19,8 +19,7 @@ class Entity
         virtual void setPosition(const float x, const float y);
         virtual void move(const float& dt, const float x, const float y);
     protected:
-        sf::Sprite* sprite;
-        sf::Texture* texture;
+        sf::Sprite sprite;
         MovementComponent* movementComponent;
 
     private:
