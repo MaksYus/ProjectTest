@@ -11,7 +11,7 @@ class Entity
 
 
         void setTexture(sf::Texture& texture);
-        void createMovementComponent(const float maxVelocity);
+        void createMovementComponent(const float maxVelocity,  const float acceleration, const float decceleration);
 
         virtual void update(const float& dt );
         virtual void render(sf::RenderTarget* target);

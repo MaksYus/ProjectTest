@@ -19,7 +19,9 @@
 class MovementComponent
 {
     public:
-        MovementComponent(sf::Sprite& sprite, float maxVelocity, float acceleration, float deceleration);
+        MovementComponent(sf::Sprite& sprite,
+                           float maxVelocity,
+                            float acceleration, float decceleration);
         virtual ~MovementComponent();
 
         const sf::Vector2f& getVelocity() const;
@@ -35,7 +37,7 @@ class MovementComponent
         /*sf::Vector2f acceleration;
         sf::Vector2f deceleration;*/
         float acceleration;
-        float deceleration;
+        float decceleration;
 
 
 };
