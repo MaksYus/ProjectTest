@@ -17,7 +17,7 @@ class Entity
         virtual void render(sf::RenderTarget* target);
 
         virtual void setPosition(const float x, const float y);
-        virtual void move(const float& dt, const float x, const float y);
+        virtual void move(const float x, const float y, const float& dt);
     protected:
         sf::Sprite sprite;
         MovementComponent* movementComponent;

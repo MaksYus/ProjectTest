@@ -1,6 +1,6 @@
 #include "MovementComponent.h"
 
-MovementComponent::MovementComponent( sf::Sprite& sprite, float maxVelocity)
+MovementComponent::MovementComponent( sf::Sprite& sprite, float maxVelocity, float acceleration, float deceleration)
 : sprite(sprite), maxVelocity(maxVelocity)
 {
     this->maxVelocity = maxVelocity;
@@ -22,5 +22,5 @@ void MovementComponent::move(const float x, const float y,const float& dt){
 }
 
 void MovementComponent::update(const float& dt){
-
+    this->sprite.move(this->velocity*dt);
 }
