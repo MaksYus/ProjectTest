@@ -17,8 +17,9 @@ class Button
 {
     public:
         Button(float x, float y, float width, float height,
-                sf::Font* font, std::string text,
-                 sf::Color idleColor,sf::Color hoverCover, sf::Color activeColor);
+                sf::Font* font, std::string text,unsigned character_size,
+                sf::Color text_tdle_color, sf::Color text_hover_colot, sf::Color text_active_color,
+                 sf::Color idle_color,sf::Color hover_color, sf::Color active_color);
         virtual ~Button();
 
         const bool isPressed() const;
@@ -34,6 +35,10 @@ class Button
         sf::RectangleShape shape;
         sf::Font* font;
         sf::Text text;
+
+        sf::Color textIdleColor;
+        sf::Color textHoverColor;
+        sf::Color textActiveColor;
 
         sf::Color idleColor;
         sf::Color hoverColor;
