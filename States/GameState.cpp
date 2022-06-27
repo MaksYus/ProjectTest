@@ -60,11 +60,11 @@ void GameState::updateInput(const float& dt){
 
 void GameState::initTextures(){
     sf::Texture temp;
-    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/ДварфБольше.png"))
+    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/DwarfAnimation.png"))
         std::cout << "ERROR! cun't load texture player" << std::endl;
-    this->textures["PLAYER_IDLE"] = temp;
+    this->textures["PLAYER_SHEET"] = temp;
 }
 
 void GameState::initPlayers(){
-    this->player = new Player(0, 0, this->textures["PLAYER_IDLE"]);
+    this->player = new Player(0, 0, this->textures["PLAYER_SHEET"]);
 }

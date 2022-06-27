@@ -33,8 +33,8 @@ void Entity::createMovementComponent(const float maxVelocity, const float accele
     this->movementComponent = new MovementComponent(this->sprite, maxVelocity, acceleration, decceleration);
 }
 
-void Entity::createAnimationComponent(sf::Sprite& sprite, sf::Texture& texture_sheet){
-    this->animationComponent = new AnimationComponent(sprite,texture_sheet);
+void Entity::createAnimationComponent( sf::Texture& texture_sheet){
+    this->animationComponent = new AnimationComponent(this->sprite,texture_sheet);
 }
 
 void Entity::setPosition(const float x, const float y){

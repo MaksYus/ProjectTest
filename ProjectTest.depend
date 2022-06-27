@@ -1910,10 +1910,10 @@
 1653496858 source:c:\users\usufm\desktop\projecttest\states\mainmenustate.cpp
 	"MainMenuState.h"
 
-1656305061 source:c:\users\praktika\documents\github\projecttest\entities\entity.cpp
+1656315075 source:c:\users\praktika\documents\github\projecttest\entities\entity.cpp
 	"Entity.h"
 
-1656304267 c:\users\praktika\documents\github\projecttest\entities\entity.h
+1656315074 c:\users\praktika\documents\github\projecttest\entities\entity.h
 	<MovementComponent.h>
 	<AnimationComponent.h>
 
@@ -2542,7 +2542,7 @@
 1656304267 source:c:\users\praktika\documents\github\projecttest\src\state.cpp
 	"State.h"
 
-1655718107 source:c:\users\praktika\documents\github\projecttest\states\gamestate.cpp
+1656321877 source:c:\users\praktika\documents\github\projecttest\states\gamestate.cpp
 	"GameState.h"
 
 1656304267 source:c:\users\praktika\documents\github\projecttest\resourcefiles\button.cpp
@@ -2551,10 +2551,10 @@
 1656304267 source:c:\users\praktika\documents\github\projecttest\states\mainmenustate.cpp
 	"MainMenuState.h"
 
-1656304267 source:c:\users\praktika\documents\github\projecttest\entities\player.cpp
+1656322301 source:c:\users\praktika\documents\github\projecttest\entities\player.cpp
 	"Player.h"
 
-1656304267 c:\users\praktika\documents\github\projecttest\entities\player.h
+1656321444 c:\users\praktika\documents\github\projecttest\entities\player.h
 	"Entity.h"
 
 1656304267 c:\users\praktika\documents\github\projecttest\components\movementcomponent.h
@@ -3239,7 +3239,7 @@
 1654356753 source:c:\users\usufm\documents\github\projecttest\states\mainmenustate.cpp
 	"MainMenuState.h"
 
-1656305047 c:\users\praktika\documents\github\projecttest\components\animationcomponent.h
+1656321575 c:\users\praktika\documents\github\projecttest\components\animationcomponent.h
 	<iostream>
 	<map>
 	<fstream>

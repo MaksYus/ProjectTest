@@ -46,6 +46,7 @@ class AnimationComponent
                       int start_x, int start_y, int end_x, int end_y, int width, int height):
                 sprite(sprite), textureSheet(textureSheet), animationTimer(animationTimer), width(width), height(height)
             {
+                this->timer = 0.f;
                 this->startRect = sf::IntRect(start_x* width, start_y * height, width, height);
                 this->endRect = sf::IntRect(end_x * width, end_y * height, width, height);
 
@@ -55,7 +56,7 @@ class AnimationComponent
             }
 
             void play(const float& dt){
-                this->timer = 10.f * dt;
+                this->timer += 10.f * dt;
                 if (this->timer >= this->animationTimer){
                     this->timer = 0.f;
 

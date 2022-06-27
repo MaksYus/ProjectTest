@@ -10,10 +10,9 @@ class Entity
         Entity();
         virtual ~Entity();
 
-
         void setTexture(sf::Texture& texture);
         void createMovementComponent(const float maxVelocity,  const float acceleration, const float decceleration);
-        void createAnimationComponent(sf::Sprite& sprite, sf::Texture& texture_sheet);
+        void createAnimationComponent( sf::Texture& texture_sheet);
 
         virtual void update(const float& dt );
         virtual void render(sf::RenderTarget* target);

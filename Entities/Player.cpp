@@ -4,13 +4,12 @@ Player::Player(float x, float y, sf::Texture& texture_sheet)
 {
     this->initVariables();
 
-    this->setTexture(texture_sheet);
     this->setPosition(x, y);
 
     this->createMovementComponent(700.f, 100.f, 10.f);
-    this->createAnimationComponent(this->sprite,texture_sheet);
+    this->createAnimationComponent(texture_sheet);
 
-   // this->animationComponent->addAnimation("IDLE_LEFT",100.f,1,1, кол-во анимаций,,)
+    this->animationComponent->addAnimation("IDLE_LEFT",2.f,0,0, 8,0,64,64);
 }
 
 Player::~Player()
@@ -24,4 +23,10 @@ void Player::initVariables(){
 
 void Player::initComponents(){
 
+}
+
+void Player::update(const float&dt){
+    this->movementComponent->update(dt);
+
+    this->animationComponent->play("IDLE_LEFT", dt);
 }
