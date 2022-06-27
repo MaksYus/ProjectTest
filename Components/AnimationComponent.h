@@ -17,7 +17,7 @@ class AnimationComponent
 {
     public:
 
-        AnimationComponent(sf::Sprite& sprite, sf::Texture& texture_sheetsf::Sprite& sprite, sf::Texture& texture_sheet);
+        AnimationComponent(sf::Sprite& sprite, sf::Texture& texture_sheet);
         virtual ~AnimationComponent();
 
         void addAnimation(const std::string key,
@@ -38,7 +38,7 @@ class AnimationComponent
             int width;
             int height;
             sf::IntRect startRect;
-            sf::intRect currentRect;
+            sf::IntRect currentRect;
             sf::IntRect endRect;
 
             Animation(sf::Sprite& sprite, sf::Texture& textureSheet,
@@ -63,7 +63,7 @@ class AnimationComponent
                         this->currentRect.left += this->width;
                     }
                     else{
-                        this->currentRect.left = this->startRect;
+                        this->currentRect.left = this->startRect.left;
                     }
 
                     this->sprite.setTextureRect(this->currentRect);
@@ -79,7 +79,7 @@ class AnimationComponent
         sf::Sprite& sprite;
         sf::Texture& textureSheet;
         std::map<std::string, Animation*> animations;
-        std::map<std::string, Animation*>:iterator it_animations = animations.begin();
+        std::map<std::string, Animation*>::iterator it_animations = animations.begin();
 };
 
 #endif // ANIMATIONCOMPONENT_H
