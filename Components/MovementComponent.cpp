@@ -15,6 +15,10 @@ const sf::Vector2f & MovementComponent::getVelocity() const{
     return this->velocity;
 }
 
+const bool MovementComponent::idle() const{
+    return this->velocity.x == 0.f && this->velocity.y == 0.f;
+}
+
 void MovementComponent::move(const float x, const float y,const float& dt){
     this->velocity.x += this->acceleration * x;
     this->velocity.y += this->acceleration * y;
