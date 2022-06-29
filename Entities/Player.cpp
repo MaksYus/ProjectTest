@@ -33,14 +33,14 @@ void Player::update(const float&dt){
 
     sf::Vector2i mousePos = sf::Mouse::getPosition();
 
-    if (this->movementComponent->idle()){
-        if(this->sprite.getPosition().x+32 < mousePos.x)
+    if (this->movementComponent->getState(IDLE)){
+        if(this->sprite.getPosition().x + 32 < mousePos.x)
             this->animationComponent->play("IDLE_RIGHT", dt);
         else
             this->animationComponent->play("IDLE_LEFT", dt);
         }
     else{
-        if(this->sprite.getPosition().x+32 < mousePos.x)
+        if(this->sprite.getPosition().x + 32 < mousePos.x)
             this->animationComponent->play("WALK_RIGHT", dt);
         else
             this->animationComponent->play("WALK_LEFT", dt);

@@ -23,6 +23,7 @@ void Entity::render(sf::RenderTarget* target){
 
 void Entity::initVariables(){
     this->movementComponent = NULL;
+    this->animationComponent = NULL;
 }
 
 void Entity::setTexture(sf::Texture& texture){
@@ -46,6 +47,7 @@ void Entity::move(const float dir_x, const float dir_y, const float& dt){
             this->movementComponent->move(dir_x,dir_y, dt);
     }
 }
+//руководство пользователя еас сгм криста, звонила милехина, попросила уточнить
 
 
 

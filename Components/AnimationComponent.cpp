@@ -21,5 +21,13 @@ void AnimationComponent::addAnimation(const std::string key,
 }
 
 void AnimationComponent::play(const std::string key, const float& dt){
+    if(this->lastAnimation != this->animations[key]){
+        if(this->lastAnimation == NULL)
+            this->lastAnimation = this->animations[key];
+        else{
+            this->lastAnimation->reset();
+            this->lastAnimation = this->animations[key];
+        }
+    }
     this->animations[key]->play(dt);
 }

@@ -81,6 +81,7 @@ class AnimationComponent
         sf::Texture& textureSheet;
         std::map<std::string, Animation*> animations;
         std::map<std::string, Animation*>::iterator it_animations = animations.begin();
+        Animation* lastAnimation;
 };
 
 #endif // ANIMATIONCOMPONENT_H
