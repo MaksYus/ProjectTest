@@ -1910,7 +1910,7 @@
 1653496858 source:c:\users\usufm\desktop\projecttest\states\mainmenustate.cpp
 	"MainMenuState.h"
 
-1656315075 source:c:\users\praktika\documents\github\projecttest\entities\entity.cpp
+1656501552 source:c:\users\praktika\documents\github\projecttest\entities\entity.cpp
 	"Entity.h"
 
 1656315074 c:\users\praktika\documents\github\projecttest\entities\entity.h
@@ -2512,8 +2512,9 @@
 1656304267 c:\users\praktika\documents\github\projecttest\include\game.h
 	<MainMenuState.h>
 
-1656304267 c:\users\praktika\documents\github\projecttest\states\mainmenustate.h
+1656569305 c:\users\praktika\documents\github\projecttest\states\mainmenustate.h
 	"GameState.h"
+	"EditorState.h"
 	"Button.h"
 
 1656304267 c:\users\praktika\documents\github\projecttest\states\gamestate.h
@@ -2548,10 +2549,10 @@
 1656304267 source:c:\users\praktika\documents\github\projecttest\resourcefiles\button.cpp
 	"Button.h"
 
-1656304267 source:c:\users\praktika\documents\github\projecttest\states\mainmenustate.cpp
+1656497044 source:c:\users\praktika\documents\github\projecttest\states\mainmenustate.cpp
 	"MainMenuState.h"
 
-1656479996 source:c:\users\praktika\documents\github\projecttest\entities\player.cpp
+1656492558 source:c:\users\praktika\documents\github\projecttest\entities\player.cpp
 	"Player.h"
 
 1656321444 c:\users\praktika\documents\github\projecttest\entities\player.h
@@ -3250,6 +3251,27 @@
 	"SFML/Audio.hpp"
 	"SFML/Network.hpp"
 
-1656304267 source:c:\users\praktika\documents\github\projecttest\components\animationcomponent.cpp
+1656493133 source:c:\users\praktika\documents\github\projecttest\components\animationcomponent.cpp
 	"AnimationComponent.h"
+
+1656494363 c:\users\praktika\documents\github\projecttest\\editorstate.h
+	"State.h"
+	"GameState.h"
+	"Button.h"
+
+1656496654 source:c:\users\praktika\documents\github\projecttest\editorstate.cpp
+	"EditorState.h"
+
+1656494363 c:\users\praktika\documents\github\projecttest\editorstate.h
+	"State.h"
+	"GameState.h"
+	"Button.h"
+
+1656494363 c:\users\praktika\documents\github\projecttest\states\editorstate.h
+	"State.h"
+	"GameState.h"
+	"Button.h"
+
+1656496654 source:c:\users\praktika\documents\github\projecttest\states\editorstate.cpp
+	"EditorState.h"
 
