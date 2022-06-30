@@ -2576,10 +2576,10 @@
 1656572111 source:c:\users\praktika\documents\github\projecttest\components\movementcomponent.cpp
 	"MovementComponent.h"
 
-1654356753 source:c:\users\usufm\documents\github\projecttest\components\movementcomponent.cpp
+1656603245 source:c:\users\usufm\documents\github\projecttest\components\movementcomponent.cpp
 	"MovementComponent.h"
 
-1654356753 c:\users\usufm\documents\github\projecttest\components\movementcomponent.h
+1656601345 c:\users\usufm\documents\github\projecttest\components\movementcomponent.h
 	<iostream>
 	<ctime>
 	<cstdlib>
@@ -3182,16 +3182,17 @@
 	<SFML/Network/IpAddress.hpp>
 	<vector>
 
-1654356753 source:c:\users\usufm\documents\github\projecttest\entities\entity.cpp
+1656518873 source:c:\users\usufm\documents\github\projecttest\entities\entity.cpp
 	"Entity.h"
 
-1654356753 c:\users\usufm\documents\github\projecttest\entities\entity.h
+1656518873 c:\users\usufm\documents\github\projecttest\entities\entity.h
 	<MovementComponent.h>
+	<AnimationComponent.h>
 
-1654356753 source:c:\users\usufm\documents\github\projecttest\entities\player.cpp
+1656603044 source:c:\users\usufm\documents\github\projecttest\entities\player.cpp
 	"Player.h"
 
-1654356753 c:\users\usufm\documents\github\projecttest\entities\player.h
+1656518873 c:\users\usufm\documents\github\projecttest\entities\player.h
 	"Entity.h"
 
 1654356753 source:c:\users\usufm\documents\github\projecttest\main.cpp
@@ -3201,8 +3202,9 @@
 1654356753 c:\users\usufm\documents\github\projecttest\include\game.h
 	<MainMenuState.h>
 
-1654356753 c:\users\usufm\documents\github\projecttest\states\mainmenustate.h
+1656601345 c:\users\usufm\documents\github\projecttest\states\mainmenustate.h
 	"GameState.h"
+	"EditorState.h"
 	"Button.h"
 
 1654356753 c:\users\usufm\documents\github\projecttest\states\gamestate.h
@@ -3211,7 +3213,7 @@
 1654356753 c:\users\usufm\documents\github\projecttest\include\state.h
 	"Player.h"
 
-1654356753 c:\users\usufm\documents\github\projecttest\resourcefiles\button.h
+1655487987 c:\users\usufm\documents\github\projecttest\resourcefiles\button.h
 	<iostream>
 	<ctime>
 	<cstdlib>
@@ -3221,7 +3223,7 @@
 	"SFML/Graphics.hpp"
 	"SFML/Audio.hpp"
 
-1654356753 source:c:\users\usufm\documents\github\projecttest\resourcefiles\button.cpp
+1655487987 source:c:\users\usufm\documents\github\projecttest\resourcefiles\button.cpp
 	"Button.h"
 
 1654356753 source:c:\users\usufm\documents\github\projecttest\src\game.cpp
@@ -3234,10 +3236,10 @@
 1654356753 source:c:\users\usufm\documents\github\projecttest\src\state.cpp
 	"State.h"
 
-1654356753 source:c:\users\usufm\documents\github\projecttest\states\gamestate.cpp
+1656601345 source:c:\users\usufm\documents\github\projecttest\states\gamestate.cpp
 	"GameState.h"
 
-1654356753 source:c:\users\usufm\documents\github\projecttest\states\mainmenustate.cpp
+1656603512 source:c:\users\usufm\documents\github\projecttest\states\mainmenustate.cpp
 	"MainMenuState.h"
 
 1656484973 c:\users\praktika\documents\github\projecttest\components\animationcomponent.h
@@ -3273,5 +3275,27 @@
 	"Button.h"
 
 1656496654 source:c:\users\praktika\documents\github\projecttest\states\editorstate.cpp
+	"EditorState.h"
+
+1656601345 source:c:\users\usufm\documents\github\projecttest\components\animationcomponent.cpp
+	"AnimationComponent.h"
+
+1656518873 c:\users\usufm\documents\github\projecttest\components\animationcomponent.h
+	<iostream>
+	<map>
+	<fstream>
+	<sstream>
+	"SFML/System.hpp"
+	"SFML/Window.hpp"
+	"SFML/Graphics.hpp"
+	"SFML/Audio.hpp"
+	"SFML/Network.hpp"
+
+1656601345 c:\users\usufm\documents\github\projecttest\states\editorstate.h
+	"State.h"
+	"GameState.h"
+	"Button.h"
+
+1656601345 source:c:\users\usufm\documents\github\projecttest\states\editorstate.cpp
 	"EditorState.h"
 

@@ -6,7 +6,7 @@ Player::Player(float x, float y, sf::Texture& texture_sheet)
 
     this->setPosition(x, y);
 
-    this->createMovementComponent(700.f, 50.f, 10.f);
+    this->createMovementComponent(500.f, 20.f, 10.f);
     this->createAnimationComponent(texture_sheet);
 
     this->animationComponent->addAnimation("IDLE_RIGHT",2.f,0,0, 8,0,64,64);
@@ -34,14 +34,14 @@ void Player::update(const float&dt){
     this->movementComponent->update(dt);
 
     sf::Vector2i mousePos = sf::Mouse::getPosition();
-    if (this->movementComponent->getState(IDLE)){
+    if (this->movementComponent->getMovingState(IDLE)){
         if(this->sprite.getPosition().x + 32 < mousePos.x){
             this->animationComponent->play("IDLE_RIGHT", dt);}
         else{
             this->animationComponent->play("IDLE_LEFT", dt);}
         }
     else{
-        if(this->movementComponent->getState(SPRINT_LEFT) || this->movementComponent->getState(SPRINT_RIGHT)){
+        if(this->movementComponent->getMovingState(SPRINT_LEFT) || this->movementComponent->getMovingState(SPRINT_RIGHT)){
             if(this->sprite.getPosition().x + 32 < mousePos.x)
             this->animationComponent->play("SPRINT_RIGHT", dt);
         else

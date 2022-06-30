@@ -15,7 +15,7 @@ const sf::Vector2f & MovementComponent::getVelocity() const{
     return this->velocity;
 }
 
-const bool MovementComponent::getState(const short unsigned state){
+const bool MovementComponent::getMovingState(const short unsigned state){
     switch(state){
     case IDLE:
         return this->velocity.x == 0.f && this->velocity.y == 0.f;
@@ -27,10 +27,10 @@ const bool MovementComponent::getState(const short unsigned state){
         return this->velocity.x > 0.f;
         break;
     case SPRINT_RIGHT:
-        return this->velocity.x > this->maxVelocity*4/5;
+        return this->velocity.x > this->maxVelocity * 95/100;
         break;
     case SPRINT_LEFT:
-        return this->velocity.x < -this->maxVelocity*4/5;
+        return this->velocity.x < -this->maxVelocity * 95/100;
         break;
     case MOVING_UP:
         return this->velocity.y < 0.f;
@@ -39,6 +39,7 @@ const bool MovementComponent::getState(const short unsigned state){
         return this->velocity.y > 0.f;
         break;
     }
+    return false;
 }
 
 void MovementComponent::move(const float x, const float y,const float& dt){
