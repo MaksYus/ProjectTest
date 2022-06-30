@@ -15,6 +15,8 @@ Player::Player(float x, float y, sf::Texture& texture_sheet)
     this->animationComponent->addAnimation("WALK_LEFT",0.25,0,3, 5,3,64,64);
     this->animationComponent->addAnimation("SPRINT_RIGHT",0.25,0,4,4,4,64,64);
     this->animationComponent->addAnimation("SPRINT_LEFT",0.25,0,5,4,5,64,64);
+    this->animationComponent->addAnimation("CUT_RIGHT",1.f,6,1,9,1,64,64);
+    this->animationComponent->addAnimation("CUT_LEFT",1.f,6,3,9,3,64,64);
 }
 
 Player::~Player()
@@ -34,6 +36,16 @@ void Player::update(const float&dt){
     this->movementComponent->update(dt);
 
     sf::Vector2i mousePos = sf::Mouse::getPosition();
+
+    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+        if(this->sprite.getPosition().x + 32 < mousePos.x){
+            this->animationComponent->play("CUT_RIGHT", dt);
+            }
+        else{
+            this->animationComponent->play("CUT_LEFT", dt);
+            }
+    }
+
     if (this->movementComponent->getMovingState(IDLE)){
         if(this->sprite.getPosition().x + 32 < mousePos.x){
             this->animationComponent->play("IDLE_RIGHT", dt);}
