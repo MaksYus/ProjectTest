@@ -26,6 +26,12 @@ const bool MovementComponent::getState(const short unsigned state){
     case MOVING_RIGHT:
         return this->velocity.x > 0.f;
         break;
+    case SPRINT_RIGHT:
+        return this->velocity.x > this->maxVelocity*4/5;
+        break;
+    case SPRINT_LEFT:
+        return this->velocity.x < -this->maxVelocity*4/5;
+        break;
     case MOVING_UP:
         return this->velocity.y < 0.f;
         break;

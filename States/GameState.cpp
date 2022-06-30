@@ -60,7 +60,7 @@ void GameState::updateInput(const float& dt){
 
 void GameState::initTextures(){
     sf::Texture temp;
-    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/Idle Walk Animation.png"))
+    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/Idle Walk Running Animation.png"))
         std::cout << "ERROR! cun't load texture player" << std::endl;
     this->textures["PLAYER_SHEET"] = temp;
 }

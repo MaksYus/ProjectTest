@@ -2543,7 +2543,7 @@
 1656304267 source:c:\users\praktika\documents\github\projecttest\src\state.cpp
 	"State.h"
 
-1656479245 source:c:\users\praktika\documents\github\projecttest\states\gamestate.cpp
+1656578043 source:c:\users\praktika\documents\github\projecttest\states\gamestate.cpp
 	"GameState.h"
 
 1656304267 source:c:\users\praktika\documents\github\projecttest\resourcefiles\button.cpp
@@ -2552,13 +2552,13 @@
 1656497044 source:c:\users\praktika\documents\github\projecttest\states\mainmenustate.cpp
 	"MainMenuState.h"
 
-1656492558 source:c:\users\praktika\documents\github\projecttest\entities\player.cpp
+1656580765 source:c:\users\praktika\documents\github\projecttest\entities\player.cpp
 	"Player.h"
 
 1656321444 c:\users\praktika\documents\github\projecttest\entities\player.h
 	"Entity.h"
 
-1656484336 c:\users\praktika\documents\github\projecttest\components\movementcomponent.h
+1656571742 c:\users\praktika\documents\github\projecttest\components\movementcomponent.h
 	<iostream>
 	<ctime>
 	<cstdlib>
@@ -2573,7 +2573,7 @@
 	"SFML/Audio.hpp"
 	"SFML/Network.hpp"
 
-1656484317 source:c:\users\praktika\documents\github\projecttest\components\movementcomponent.cpp
+1656572111 source:c:\users\praktika\documents\github\projecttest\components\movementcomponent.cpp
 	"MovementComponent.h"
 
 1654356753 source:c:\users\usufm\documents\github\projecttest\components\movementcomponent.cpp
@@ -3251,7 +3251,7 @@
 	"SFML/Audio.hpp"
 	"SFML/Network.hpp"
 
-1656493133 source:c:\users\praktika\documents\github\projecttest\components\animationcomponent.cpp
+1656581173 source:c:\users\praktika\documents\github\projecttest\components\animationcomponent.cpp
 	"AnimationComponent.h"
 
 1656494363 c:\users\praktika\documents\github\projecttest\\editorstate.h

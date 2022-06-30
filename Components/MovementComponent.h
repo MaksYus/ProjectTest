@@ -16,7 +16,7 @@
 #include"SFML/Audio.hpp"
 #include"SFML/Network.hpp"
 
-enum moving_states{IDLE = 0, MOVING_LEFT, MOVING_RIGHT, MOVING_UP, MOVING_DOWN};
+enum moving_states{IDLE = 0, MOVING_LEFT, MOVING_RIGHT, MOVING_UP, MOVING_DOWN, SPRINT_LEFT, SPRINT_RIGHT};
 
 class MovementComponent
 {
