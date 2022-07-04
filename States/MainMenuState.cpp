@@ -112,7 +112,7 @@ void MainMenuState::updateButtons(){
     }
 }
 
-void MainMenuState::renderButtons(sf::RenderTarget* target){
+void MainMenuState::renderButtons(sf::RenderTarget& target){
     this->it = this->buttons.begin();
     for (int i = 0; this->it != this->buttons.end(); this->it++, i++)
         this->it->second->render(target);
@@ -122,7 +122,7 @@ void MainMenuState::render(sf::RenderTarget* target){
     if (!target)
         target = this->window;
     target->draw(this->background);
-    this->renderButtons(target);
+    this->renderButtons(*target);
 
     //TODO Remove
     sf::Text mouseText;

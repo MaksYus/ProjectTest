@@ -1,5 +1,6 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+
 #include "Entity.h"
 
 class Player:
@@ -15,6 +16,9 @@ class Player:
     private:
         void initVariables();
         void initComponents();
+        void initAnimations();
+
+        sf::Texture& textureSheet;
 };
 
 #endif // PLAYER_H

@@ -59,6 +59,8 @@
 		</Linker>
 		<Unit filename="Components/AnimationComponent.cpp" />
 		<Unit filename="Components/AnimationComponent.h" />
+		<Unit filename="Components/HitboxComponent.cpp" />
+		<Unit filename="Components/HitboxComponent.h" />
 		<Unit filename="Components/MovementComponent.cpp" />
 		<Unit filename="Components/MovementComponent.h" />
 		<Unit filename="Entities/Entity.cpp" />

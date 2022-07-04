@@ -20,26 +20,32 @@ const bool MovementComponent::getMovingState(const short unsigned state){
     case IDLE:
         return this->velocity.x == 0.f && this->velocity.y == 0.f;
         break;
+    case MOVING:
+        return getMovingState(MOVING_LEFT) || getMovingState(MOVING_RIGHT) || getMovingState(MOVING_UP)|| getMovingState(MOVING_DOWN);
     case MOVING_LEFT:
         return this->velocity.x < 0.f;
-        break;
     case MOVING_RIGHT:
         return this->velocity.x > 0.f;
-        break;
-    case SPRINT_RIGHT:
-        return this->velocity.x > this->maxVelocity * 95/100;
-        break;
-    case SPRINT_LEFT:
-        return this->velocity.x < -this->maxVelocity * 95/100;
-        break;
     case MOVING_UP:
         return this->velocity.y < 0.f;
-        break;
     case MOVING_DOWN:
         return this->velocity.y > 0.f;
-        break;
+    case SPRINT:
+        return getMovingState(SPRINT_LEFT) || getMovingState(SPRINT_RIGHT) || getMovingState(SPRINT_UP)|| getMovingState(SPRINT_DOWN);
+    case SPRINT_RIGHT:
+        return this->velocity.x > this->maxVelocity * 95/100;
+    case SPRINT_LEFT:
+        return this->velocity.x < -this->maxVelocity * 95/100;
+    case SPRINT_UP:
+        return this->velocity.y < -this->maxVelocity * 95/100;
+    case SPRINT_DOWN:
+        return this->velocity.y > this->maxVelocity * 95/100;
     }
     return false;
+}
+
+void MovementComponent::setMaxVelocity(float newMaxVelocity){
+    this->maxVelocity = newMaxVelocity >= 0 ? newMaxVelocity : 0;
 }
 
 void MovementComponent::move(const float x, const float y,const float& dt){

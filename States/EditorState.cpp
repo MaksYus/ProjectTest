@@ -65,7 +65,7 @@ void EditorState::updateButtons(){
 
 }
 
-void EditorState::renderButtons(sf::RenderTarget* target){
+void EditorState::renderButtons(sf::RenderTarget& target){
     this->it = this->buttons.begin();
     for (int i = 0; this->it != this->buttons.end(); this->it++, i++)
         this->it->second->render(target);
@@ -74,7 +74,7 @@ void EditorState::renderButtons(sf::RenderTarget* target){
 void EditorState::render(sf::RenderTarget* target){
     if (!target)
         target = this->window;
-    this->renderButtons(target);
+    this->renderButtons(*target);
 
 }
 

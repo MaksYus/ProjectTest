@@ -1,7 +1,7 @@
 #ifndef EDITORSTATE_H
 #define EDITORSTATE_H
 
-#include "State.h"
+//#include "State.h"
 #include"GameState.h"
 #include"Button.h"
 
@@ -14,7 +14,7 @@ class EditorState : public State
         void updateInput(const float& dt);
         void updateButtons();
         void update(const float& dt);
-        void renderButtons(sf::RenderTarget* target = NULL);
+        void renderButtons(sf::RenderTarget& target);
         void render(sf::RenderTarget* target = NULL);
     protected:
 
