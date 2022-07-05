@@ -56,6 +56,14 @@ void Entity::move(const float dir_x, const float dir_y, const float& dt){
             this->movementComponent->move(dir_x,dir_y, dt);
     }
 }
+
+void Entity::interact(Entity& sender){
+    std::cout << sender.getInfo() << " interact with " << this->getInfo() << std::endl;
+}
+
+std::string Entity::getInfo(){
+    return "Entity";
+}
 //руководство пользователя еас сгм криста, звонила милехина, попросила уточнить
 
 

@@ -11,6 +11,9 @@ class Player:
         virtual ~Player();
 
         virtual void update(const float&dt);
+        virtual void interact(Entity& sender);
+
+        virtual std::string getInfo();
     protected:
 
     private:

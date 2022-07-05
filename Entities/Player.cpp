@@ -28,14 +28,9 @@ void Player::initComponents(){
 void Player::initAnimations(){
     this->animationComponent->addAnimation("IDLE",2.f,0,0, 8,0,64,64);
     this->animationComponent->addAnimation("WALK",0.25,0,1, 5,1,64,64);
-    //this->animationComponent->addAnimation("IDLE_LEFT",2.f,0,2, 8,2,64,64);
-    //this->animationComponent->addAnimation("WALK_LEFT",0.25,0,3, 5,3,64,64);
     this->animationComponent->addAnimation("SPRINT",0.25,0,2,4,2,64,64);
-    //this->animationComponent->addAnimation("SPRINT_LEFT",0.25,0,5,4,5,64,64);
     this->animationComponent->addAnimation("CUT",1.f,6,1,9,1,64,64);
-    //this->animationComponent->addAnimation("CUT_LEFT",1.f,6,3,9,3,64,64);
     this->animationComponent->addAnimation("BACKWALK",0.25,5,2,9,2,64,64);
-    //this->animationComponent->addAnimation("BACKWALK_LEFT",0.25,5,5,9,5,64,64);
 }
 
 void Player::update(const float&dt){
@@ -73,4 +68,13 @@ void Player::update(const float&dt){
     }
 
     this->hitboxComponent->update();
+}
+
+void Player::interact(Entity& sender){
+    std::cout << "player interact with player" << std::endl;
+    std::cout << "sender: " << sender.getInfo() << std::endl;
+}
+
+std::string Player::getInfo(){
+    return "Player";
 }
