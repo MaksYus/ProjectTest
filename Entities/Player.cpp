@@ -71,8 +71,11 @@ void Player::update(const float&dt){
 }
 
 void Player::interact(Entity& sender){
-    std::cout << "player interact with player" << std::endl;
-    std::cout << "sender: " << sender.getInfo() << std::endl;
+    sf::FloatRect mouseRect(sf::Mouse::getPosition().x, sf::Mouse::getPosition().y, 1, 1);
+    if(this->hitboxComponent->checkIntersect(mouseRect)){
+        std::cout << "player interact with player" << std::endl;
+        std::cout << "sender: " << sender.getInfo() << std::endl;
+    }
 }
 
 std::string Player::getInfo(){
