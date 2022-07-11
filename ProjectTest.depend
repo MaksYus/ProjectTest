@@ -2576,10 +2576,10 @@
 1656572111 source:c:\users\praktika\documents\github\projecttest\components\movementcomponent.cpp
 	"MovementComponent.h"
 
-1656944672 source:c:\users\usufm\documents\github\projecttest\components\movementcomponent.cpp
+1657471792 source:c:\users\usufm\documents\github\projecttest\components\movementcomponent.cpp
 	"MovementComponent.h"
 
-1656944363 c:\users\usufm\documents\github\projecttest\components\movementcomponent.h
+1657468769 c:\users\usufm\documents\github\projecttest\components\movementcomponent.h
 	<iostream>
 	<ctime>
 	<cstdlib>
@@ -3185,15 +3185,15 @@
 1657045002 source:c:\users\usufm\documents\github\projecttest\entities\entity.cpp
 	"Entity.h"
 
-1657044447 c:\users\usufm\documents\github\projecttest\entities\entity.h
+1657560802 c:\users\usufm\documents\github\projecttest\entities\entity.h
 	<MovementComponent.h>
 	<AnimationComponent.h>
 	<HitboxComponent.h>
 
-1657045612 source:c:\users\usufm\documents\github\projecttest\entities\player.cpp
+1657563519 source:c:\users\usufm\documents\github\projecttest\entities\player.cpp
 	"Player.h"
 
-1657043895 c:\users\usufm\documents\github\projecttest\entities\player.h
+1657564682 c:\users\usufm\documents\github\projecttest\entities\player.h
 	"Entity.h"
 
 1654356753 source:c:\users\usufm\documents\github\projecttest\main.cpp
@@ -3276,10 +3276,10 @@
 1656496654 source:c:\users\praktika\documents\github\projecttest\states\editorstate.cpp
 	"EditorState.h"
 
-1656943378 source:c:\users\usufm\documents\github\projecttest\components\animationcomponent.cpp
+1657563752 source:c:\users\usufm\documents\github\projecttest\components\animationcomponent.cpp
 	"AnimationComponent.h"
 
-1656518873 c:\users\usufm\documents\github\projecttest\components\animationcomponent.h
+1657563759 c:\users\usufm\documents\github\projecttest\components\animationcomponent.h
 	<iostream>
 	<map>
 	<fstream>

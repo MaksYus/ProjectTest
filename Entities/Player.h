@@ -11,6 +11,7 @@ class Player:
         virtual ~Player();
 
         virtual void update(const float&dt);
+        virtual void updateAnimation(const float & dt);
         virtual void interact(Entity& sender);
 
         virtual std::string getInfo();
@@ -20,6 +21,8 @@ class Player:
         void initVariables();
         void initComponents();
         void initAnimations();
+
+        bool animationCut;
 
         sf::Texture& textureSheet;
 };

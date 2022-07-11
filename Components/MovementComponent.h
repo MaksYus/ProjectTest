@@ -28,8 +28,9 @@ class MovementComponent
         virtual ~MovementComponent();
 
         const sf::Vector2f& getVelocity() const;
-
+        const float& getMaxVelocity() const;
         const bool getMovingState(const short unsigned state);
+
         void setMaxVelocity(float newMaxVelocity);
 
         void move(const float x, const float y,const float& dt);
