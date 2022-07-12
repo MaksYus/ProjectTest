@@ -26,6 +26,11 @@ void Player::initComponents(){
 }
 
 void Player::initAnimations(){
+   /* sf::Texture temp;
+    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/Dwarf Left Animation.png"))
+        std::cout << "ERROR! cun't load texture player" << std::endl;
+    textures["PLAYER_SHEET"] = temp;*/
+
     this->animationComponent->addAnimation("IDLE",20.f,0,0, 8,0,64,64);
     this->animationComponent->addAnimation("WALK",2.5,0,1, 5,1,64,64);
     this->animationComponent->addAnimation("SPRINT",2.5,0,2,4,2,64,64);
@@ -62,26 +67,34 @@ void Player::updateAnimation(const float & dt)
         else {this->movementComponent->setMaxVelocity(500);backwalk = false;}
     }
 
-
-
+    std::vector<std::string> cutAnim;
+    cutAnim.push_back("CUT");
+    std::vector<std::string> idleAnim;
+    idleAnim.push_back("IDLE");
+    std::vector<std::string> bacwalkAnim;
+    bacwalkAnim.push_back("BACKWALK");
+    std::vector<std::string> sprintAnim;
+    sprintAnim.push_back("SPRINT");
+    std::vector<std::string> walkAnim;
+    walkAnim.push_back("WALK");
     if(animationCut){
-        this->animationComponent->play("CUT", dt,true);
+        this->animationComponent->play(cutAnim, dt,true);
         if(this->animationComponent->isDone("CUT")){
             animationCut = false;
         }
     }
     if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && !animationCut){
         animationCut = true;
-        this->animationComponent->play("CUT", dt,true);
+        this->animationComponent->play(cutAnim, dt,true);
     }
     else if(this->movementComponent->getMovingState(IDLE)){
-        this->animationComponent->play("IDLE", dt);
+        this->animationComponent->play(idleAnim, dt);
     } else if(backwalk) {
-        this->animationComponent->play("BACKWALK", dt);
+        this->animationComponent->play(bacwalkAnim, dt);
     } else if(this->movementComponent->getMovingState(SPRINT)){
-        this->animationComponent->play("SPRINT", dt);
+        this->animationComponent->play(sprintAnim, dt);
     } else if(this->movementComponent->getMovingState(MOVING)){
-        this->animationComponent->play("WALK", dt);
+        this->animationComponent->play(walkAnim, dt);
     }
 }
 

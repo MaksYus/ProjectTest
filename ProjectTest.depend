@@ -3185,12 +3185,12 @@
 1657045002 source:c:\users\usufm\documents\github\projecttest\entities\entity.cpp
 	"Entity.h"
 
-1657560802 c:\users\usufm\documents\github\projecttest\entities\entity.h
+1657644377 c:\users\usufm\documents\github\projecttest\entities\entity.h
 	<MovementComponent.h>
 	<AnimationComponent.h>
 	<HitboxComponent.h>
 
-1657563519 source:c:\users\usufm\documents\github\projecttest\entities\player.cpp
+1657644744 source:c:\users\usufm\documents\github\projecttest\entities\player.cpp
 	"Player.h"
 
 1657564682 c:\users\usufm\documents\github\projecttest\entities\player.h
@@ -3276,14 +3276,15 @@
 1656496654 source:c:\users\praktika\documents\github\projecttest\states\editorstate.cpp
 	"EditorState.h"
 
-1657563752 source:c:\users\usufm\documents\github\projecttest\components\animationcomponent.cpp
+1657638736 source:c:\users\usufm\documents\github\projecttest\components\animationcomponent.cpp
 	"AnimationComponent.h"
 
-1657563759 c:\users\usufm\documents\github\projecttest\components\animationcomponent.h
+1657638661 c:\users\usufm\documents\github\projecttest\components\animationcomponent.h
 	<iostream>
 	<map>
 	<fstream>
 	<sstream>
+	<vector>
 	"SFML/System.hpp"
 	"SFML/Window.hpp"
 	"SFML/Graphics.hpp"

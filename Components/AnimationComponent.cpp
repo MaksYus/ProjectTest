@@ -26,8 +26,8 @@ void AnimationComponent::addAnimation(const std::string key,
                                       start_x, start_y,end_x,end_y, width, height);
 }
 
-const bool& AnimationComponent::play(const std::string key, const float& dt, const bool priority){
-   if (this->priorityAnimation) //If there is a priority animation
+const bool & AnimationComponent::playSingle(const std::string key, const float& dt, const bool priority){
+if (this->priorityAnimation) //If there is a priority animation
 	{
 		if (this->priorityAnimation == this->animations[key])
 		{
@@ -73,3 +73,15 @@ const bool& AnimationComponent::play(const std::string key, const float& dt, con
 
 	return this->animations[key]->isDone();
 }
+
+const bool& AnimationComponent::play(const std::vector<std::string> keys, const float& dt, const bool priority){
+    bool done = true;
+
+    std::vector<std::string>::const_iterator const_it_keys;
+    const_it_keys = keys.begin();
+    for(const_it_keys = keys.begin(); const_it_keys != keys.end(); ++const_it_keys){
+        done = done && this->playSingle(*const_it_keys,dt,priority);
+    }
+	return done;
+}
+
