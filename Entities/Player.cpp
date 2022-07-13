@@ -1,7 +1,7 @@
 #include "Player.h"
 
-Player::Player(float x, float y, sf::Texture& texture_sheet):
-    textureSheet(texture_sheet), animationCut(0)
+Player::Player(float x, float y, std::map<std::string, sf::Texture>  texture_sheets):
+    textureSheets(texture_sheets), animationCut(0)
 {
     this->setPosition(x, y);
 
@@ -27,11 +27,12 @@ void Player::initComponents(){
 
 void Player::initAnimations(){
 
-    this->animationComponent->addAnimation(this->textureSheet, "IDLE",20.f,0,0, 8,0,64,64);
-    this->animationComponent->addAnimation(this->textureSheet,"WALK",2.5,0,1, 5,1,64,64);
-    this->animationComponent->addAnimation(this->textureSheet,"SPRINT",2.5,0,2,4,2,64,64);
-    this->animationComponent->addAnimation(this->textureSheet,"CUT",10.f,6,1,9,1,64,64);
-    this->animationComponent->addAnimation(this->textureSheet,"BACKWALK",2.5,5,2,9,2,64,64);
+
+    this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"IDLE",20.f,0,0, 8,0,64,64);
+    this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"WALK",2.5,0,1, 5,1,64,64);
+    this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"SPRINT",2.5,0,2,4,2,64,64);
+    this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"CUT",10.f,6,1,9,1,64,64);
+    this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"BACKWALK",2.5,5,2,9,2,64,64);
 }
 
 void Player::update(const float&dt){

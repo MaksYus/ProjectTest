@@ -7,7 +7,7 @@ class Player:
     public Entity
 {
     public:
-        Player(float x, float y, sf::Texture& texture_sheet);
+        Player(float x, float y,std::map<std::string, sf::Texture> texture_sheets);
         virtual ~Player();
 
         virtual void update(const float&dt);
@@ -24,7 +24,7 @@ class Player:
 
         bool animationCut;
 
-        sf::Texture& textureSheet;
+        std::map<std::string, sf::Texture>  textureSheets;
 };
 
 #endif // PLAYER_H
