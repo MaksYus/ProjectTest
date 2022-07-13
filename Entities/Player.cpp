@@ -22,20 +22,16 @@ void Player::initVariables(){
 void Player::initComponents(){
     this->createHitboxComponent(this->sprite, 5.f, 5.f, 46, 55);
     this->createMovementComponent(500.f, 20.f, 10.f);
-    this->createAnimationComponent(this->textureSheet);
+    this->createAnimationComponent();
 }
 
 void Player::initAnimations(){
-   /* sf::Texture temp;
-    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/Dwarf Left Animation.png"))
-        std::cout << "ERROR! cun't load texture player" << std::endl;
-    textures["PLAYER_SHEET"] = temp;*/
 
-    this->animationComponent->addAnimation("IDLE",20.f,0,0, 8,0,64,64);
-    this->animationComponent->addAnimation("WALK",2.5,0,1, 5,1,64,64);
-    this->animationComponent->addAnimation("SPRINT",2.5,0,2,4,2,64,64);
-    this->animationComponent->addAnimation("CUT",10.f,6,1,9,1,64,64);
-    this->animationComponent->addAnimation("BACKWALK",2.5,5,2,9,2,64,64);
+    this->animationComponent->addAnimation(this->textureSheet, "IDLE",20.f,0,0, 8,0,64,64);
+    this->animationComponent->addAnimation(this->textureSheet,"WALK",2.5,0,1, 5,1,64,64);
+    this->animationComponent->addAnimation(this->textureSheet,"SPRINT",2.5,0,2,4,2,64,64);
+    this->animationComponent->addAnimation(this->textureSheet,"CUT",10.f,6,1,9,1,64,64);
+    this->animationComponent->addAnimation(this->textureSheet,"BACKWALK",2.5,5,2,9,2,64,64);
 }
 
 void Player::update(const float&dt){

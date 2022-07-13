@@ -16,7 +16,7 @@ class Entity
         void setTexture(sf::Texture& texture);
         void createHitboxComponent( sf::Sprite& Sprite, float x, float y, float width, float height);
         void createMovementComponent(const float maxVelocity,  const float acceleration, const float decceleration);
-        void createAnimationComponent( sf::Texture& texture_sheet);
+        void createAnimationComponent();
 
         virtual void update(const float& dt );
         virtual void render(sf::RenderTarget& target);

@@ -3182,10 +3182,10 @@
 	<SFML/Network/IpAddress.hpp>
 	<vector>
 
-1657723000 source:c:\users\usufm\documents\github\projecttest\entities\entity.cpp
+1657726252 source:c:\users\usufm\documents\github\projecttest\entities\entity.cpp
 	"Entity.h"
 
-1657725837 c:\users\usufm\documents\github\projecttest\entities\entity.h
+1657726212 c:\users\usufm\documents\github\projecttest\entities\entity.h
 	<MovementComponent.h>
 	<AnimationComponent.h>
 	<HitboxComponent.h>
@@ -3193,7 +3193,7 @@
 1657723000 source:c:\users\usufm\documents\github\projecttest\entities\player.cpp
 	"Player.h"
 
-1657725838 c:\users\usufm\documents\github\projecttest\entities\player.h
+1657726268 c:\users\usufm\documents\github\projecttest\entities\player.h
 	"Entity.h"
 
 1657723001 source:c:\users\usufm\documents\github\projecttest\main.cpp
@@ -3235,7 +3235,7 @@
 1657723001 source:c:\users\usufm\documents\github\projecttest\src\state.cpp
 	"State.h"
 
-1657723000 source:c:\users\usufm\documents\github\projecttest\states\gamestate.cpp
+1657725837 source:c:\users\usufm\documents\github\projecttest\states\gamestate.cpp
 	"GameState.h"
 
 1657723000 source:c:\users\usufm\documents\github\projecttest\states\mainmenustate.cpp
@@ -3276,10 +3276,10 @@
 1656496654 source:c:\users\praktika\documents\github\projecttest\states\editorstate.cpp
 	"EditorState.h"
 
-1657723000 source:c:\users\usufm\documents\github\projecttest\components\animationcomponent.cpp
+1657725999 source:c:\users\usufm\documents\github\projecttest\components\animationcomponent.cpp
 	"AnimationComponent.h"
 
-1657725838 c:\users\usufm\documents\github\projecttest\components\animationcomponent.h
+1657726233 c:\users\usufm\documents\github\projecttest\components\animationcomponent.h
 	<iostream>
 	<map>
 	<fstream>

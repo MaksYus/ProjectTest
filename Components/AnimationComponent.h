@@ -120,7 +120,6 @@ private:
 	};
 
 	sf::Sprite& sprite;
-	sf::Texture& textureSheet;
 	std::map<std::string, Animation*> animations;
 	std::map<std::string, Animation*>::iterator it_animations = animations.begin();
 	Animation* lastAnimation;
@@ -129,7 +128,7 @@ private:
 	const bool & playSingle(const std::string key, const float& dt, const bool priority = false);
 
 public:
-	AnimationComponent(sf::Sprite& sprite, sf::Texture& texture_sheet);
+	AnimationComponent(sf::Sprite& sprite);
 	virtual ~AnimationComponent();
 
 	//Accessor
