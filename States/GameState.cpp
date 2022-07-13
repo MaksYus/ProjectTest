@@ -31,15 +31,24 @@ void GameState::initKeybinds(){
 }
 
 void GameState::update(const float& dt){
-    this->updateMousePosition();
-    this->updateInput(dt);
-    this->player->update(dt);
+    if(!this->paused){
+        this->updateMousePosition();
+        this->updateInput(dt);
+        this->player->update(dt);
+    }
+    else {
+
+    }
 }
 
 void GameState::render(sf::RenderTarget* target){
     if (!target)
         target = this->window;
     this->player->render(*target);
+
+    if (this->paused){
+
+    }
 }
 
 
