@@ -18,10 +18,10 @@ const bool & AnimationComponent::isDone(const std::string key)
 	return this->animations[key]->isDone();
 }
 
-void AnimationComponent::addAnimation(const std::string key,
+void AnimationComponent::addAnimation(sf::Texture& textureSheet, const std::string key,
                                       float animationTimer,
                                       int start_x, int start_y, int end_x, int end_y, int width, int height){
-    this->animations[key] = new Animation(this->sprite,this->textureSheet,
+    this->animations[key] = new Animation(this->sprite, textureSheet,
                                       animationTimer,
                                       start_x, start_y,end_x,end_y, width, height);
 }
