@@ -27,17 +27,31 @@ void Player::initComponents(){
 
 void Player::initAnimations(){
 
-
-    this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"IDLE",20.f,0,0, 8,0,64,64);
-    //walk
-    this->animationComponent->addAnimation(this->textureSheets["PLAYER_DWARF_ARMOR_WALK"],"WALK ARMOR",-1.f,0,0, 0,0,64,64);
+//walk
+    this->animationComponent->addAnimation(this->textureSheets["PLAYER_DWARF_ARMOR_WALK"],"WALK ARMOR",100.f,0,0, 0,0,64,64);
     this->animationComponent->addAnimation(this->textureSheets["PLAYER_DWARF_WEAPON_WALK"],"WALK AXE",7.5,0,0, 1,0,64,64);
     this->animationComponent->addAnimation(this->textureSheets["PLAYER_DWARF_HEAD_WALK"],"WALK HEAD",7.5,0,0, 1,0,64,64);
     this->animationComponent->addAnimation(this->textureSheets["PLAYER_DWARF_LEGS_WALK"],"WALK LEGS",2.5,0,0, 5,0,64,64);
 
+    this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"IDLE",20.f,0,0, 8,0,64,64);
+    this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"WALK",3.5,0,1, 5,1,64,64);
     this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"SPRINT",2.5,0,2,4,2,64,64);
     this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"CUT",10.f,6,1,9,1,64,64);
     this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"BACKWALK",2.5,5,2,9,2,64,64);
+
+    this->cutAnim.push_back("CUT");
+
+    this->idleAnim.push_back("IDLE");
+
+    this->bacwalkAnim.push_back("BACKWALK");
+
+    this->sprintAnim.push_back("SPRINT");
+    this->walkAnim.push_back("WALK");
+
+    //this->walkAnim.push_back("WALK ARMOR");
+    //this->walkAnim.push_back("WALK LEGS");
+    //this->walkAnim.push_back("WALK AXE");
+    //this->walkAnim.push_back("WALK HEAD");
 }
 
 void Player::update(const float&dt){
@@ -69,38 +83,24 @@ void Player::updateAnimation(const float & dt)
         else {this->movementComponent->setMaxVelocity(500);backwalk = false;}
     }
 
-    std::vector<std::string> cutAnim;
-    cutAnim.push_back("CUT");
-    std::vector<std::string> idleAnim;
-    idleAnim.push_back("IDLE");
-    std::vector<std::string> bacwalkAnim;
-    bacwalkAnim.push_back("BACKWALK");
-    std::vector<std::string> sprintAnim;
-    sprintAnim.push_back("SPRINT");
-    std::vector<std::string> walkAnim;
-    walkAnim.push_back("PLAYER_DWARF_ARMOR_WALK");
-    walkAnim.push_back("PLAYER_DWARF_LEGS_WALK");
-    walkAnim.push_back("PLAYER_DWARF_WEAPON_WALK");
-    walkAnim.push_back("PLAYER_DWARF_HEAD_WALK");
-
     if(animationCut){
-        this->animationComponent->play(cutAnim, dt,true);
+        this->animationComponent->play(this->cutAnim, dt,true);
         if(this->animationComponent->isDone("CUT")){
             animationCut = false;
         }
     }
     if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && !animationCut){
         animationCut = true;
-        this->animationComponent->play(cutAnim, dt,true);
+        this->animationComponent->play(this->cutAnim, dt,true);
     }
     else if(this->movementComponent->getMovingState(IDLE)){
-        this->animationComponent->play(idleAnim, dt);
+        this->animationComponent->play(this->idleAnim, dt);
     } else if(backwalk) {
-        this->animationComponent->play(bacwalkAnim, dt);
+        this->animationComponent->play(this->bacwalkAnim, dt);
     } else if(this->movementComponent->getMovingState(SPRINT)){
-        this->animationComponent->play(sprintAnim, dt);
+        this->animationComponent->play(this->sprintAnim, dt);
     } else if(this->movementComponent->getMovingState(MOVING)){
-        this->animationComponent->play(walkAnim, dt);
+        this->animationComponent->play(this->walkAnim, dt);
     }
 }
 

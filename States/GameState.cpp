@@ -66,16 +66,16 @@ void GameState::initTextures(){
         std::cout << "ERROR! cun't load texture player" << std::endl;
     this->textures["PLAYER_SHEET"] = temp;
 
-    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/Dwarf Left Animation.png"))
+    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/Dwarf walk armor.png"))
         std::cout << "ERROR! cun't load texture player" << std::endl;
     this->textures["PLAYER_DWARF_ARMOR_WALK"] = temp;
-    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/Dwarf Left Animation.png"))
+    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/Dwarf walk axe.png"))
         std::cout << "ERROR! cun't load texture player" << std::endl;
     this->textures["PLAYER_DWARF_WEAPON_WALK"] = temp;
-    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/Dwarf Left Animation.png"))
+    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/Dwarf walk head.png"))
         std::cout << "ERROR! cun't load texture player" << std::endl;
     this->textures["PLAYER_DWARF_HEAD_WALK"] = temp;
-    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/Dwarf Left Animation.png"))
+    if(!temp.loadFromFile("ResourceFiles/Images/Sprites/player/Dwarf walk legs.png"))
         std::cout << "ERROR! cun't load texture player" << std::endl;
     this->textures["PLAYER_DWARF_LEGS_WALK"] = temp;
 }

@@ -76,6 +76,7 @@ private:
 					this->done = true;
 				}
 
+                //std::cout << this->currentRect.top << " " << this->currentRect.left << " timer:" << this->animationTimer << std::endl;
 				this->sprite.setTextureRect(this->currentRect);
 			}
 

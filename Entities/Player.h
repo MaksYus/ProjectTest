@@ -25,6 +25,12 @@ class Player:
         bool animationCut;
 
         std::map<std::string, sf::Texture>  textureSheets;
+
+        std::vector<std::string> cutAnim;
+        std::vector<std::string> idleAnim;
+        std::vector<std::string> bacwalkAnim;
+        std::vector<std::string> sprintAnim;
+        std::vector<std::string> walkAnim;
 };
 
 #endif // PLAYER_H

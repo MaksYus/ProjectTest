@@ -80,7 +80,6 @@ const bool& AnimationComponent::play(const std::vector<std::string> keys, const 
     std::vector<std::string>::const_iterator const_it_keys;
     const_it_keys = keys.begin();
     for(const_it_keys = keys.begin(); const_it_keys != keys.end(); ++const_it_keys){
-        std::cout << const_it_keys << std::endl;
         done = done && this->playSingle(*const_it_keys,dt,priority);
     }
 	return done;
