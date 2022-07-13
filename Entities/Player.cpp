@@ -29,7 +29,12 @@ void Player::initAnimations(){
 
 
     this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"IDLE",20.f,0,0, 8,0,64,64);
-    this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"WALK",2.5,0,1, 5,1,64,64);
+    //walk
+    this->animationComponent->addAnimation(this->textureSheets["PLAYER_DWARF_ARMOR_WALK"],"WALK ARMOR",-1.f,0,0, 0,0,64,64);
+    this->animationComponent->addAnimation(this->textureSheets["PLAYER_DWARF_WEAPON_WALK"],"WALK AXE",7.5,0,0, 1,0,64,64);
+    this->animationComponent->addAnimation(this->textureSheets["PLAYER_DWARF_HEAD_WALK"],"WALK HEAD",7.5,0,0, 1,0,64,64);
+    this->animationComponent->addAnimation(this->textureSheets["PLAYER_DWARF_LEGS_WALK"],"WALK LEGS",2.5,0,0, 5,0,64,64);
+
     this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"SPRINT",2.5,0,2,4,2,64,64);
     this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"CUT",10.f,6,1,9,1,64,64);
     this->animationComponent->addAnimation(this->textureSheets["PLAYER_SHEET"],"BACKWALK",2.5,5,2,9,2,64,64);
@@ -73,7 +78,11 @@ void Player::updateAnimation(const float & dt)
     std::vector<std::string> sprintAnim;
     sprintAnim.push_back("SPRINT");
     std::vector<std::string> walkAnim;
-    walkAnim.push_back("WALK");
+    walkAnim.push_back("PLAYER_DWARF_ARMOR_WALK");
+    walkAnim.push_back("PLAYER_DWARF_LEGS_WALK");
+    walkAnim.push_back("PLAYER_DWARF_WEAPON_WALK");
+    walkAnim.push_back("PLAYER_DWARF_HEAD_WALK");
+
     if(animationCut){
         this->animationComponent->play(cutAnim, dt,true);
         if(this->animationComponent->isDone("CUT")){
