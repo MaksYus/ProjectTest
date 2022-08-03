@@ -3206,10 +3206,11 @@
 1657723000 c:\users\usufm\documents\github\projecttest\states\mainmenustate.h
 	"EditorState.h"
 
-1657723000 c:\users\usufm\documents\github\projecttest\states\gamestate.h
+1659542559 c:\users\usufm\documents\github\projecttest\states\gamestate.h
 	"State.h"
+	"PauseMenu.h"
 
-1657725837 c:\users\usufm\documents\github\projecttest\include\state.h
+1657734005 c:\users\usufm\documents\github\projecttest\include\state.h
 	"Player.h"
 
 1657723000 c:\users\usufm\documents\github\projecttest\resourcefiles\button.h
@@ -3232,10 +3233,10 @@
 	<cstdlib>
 	<Game.h>
 
-1657723001 source:c:\users\usufm\documents\github\projecttest\src\state.cpp
+1657734066 source:c:\users\usufm\documents\github\projecttest\src\state.cpp
 	"State.h"
 
-1657732355 source:c:\users\usufm\documents\github\projecttest\states\gamestate.cpp
+1657734244 source:c:\users\usufm\documents\github\projecttest\states\gamestate.cpp
 	"GameState.h"
 
 1657723000 source:c:\users\usufm\documents\github\projecttest\states\mainmenustate.cpp
@@ -3310,4 +3311,10 @@
 	"SFML/Graphics.hpp"
 	"SFML/Audio.hpp"
 	"SFML/Network.hpp"
+
+1659542327 c:\users\usufm\documents\github\projecttest\gui\pausemenu.h
+	"Button.h"
+
+1659542317 source:c:\users\usufm\documents\github\projecttest\gui\pausemenu.cpp
+	"PauseMenu.h"
 

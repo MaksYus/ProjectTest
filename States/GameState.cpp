@@ -1,7 +1,7 @@
 #include "GameState.h"
 
 GameState::GameState(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::stack<State*>* states):
-     State(window, supportedKeys,states)
+     State(window, supportedKeys,states), pmenu(*window)
 {
     this->initKeybinds();
     this->initTextures();
@@ -37,7 +37,7 @@ void GameState::update(const float& dt){
         this->player->update(dt);
     }
     else {
-
+        this->pmenu.update();
     }
 }
 
@@ -47,7 +47,7 @@ void GameState::render(sf::RenderTarget* target){
     this->player->render(*target);
 
     if (this->paused){
-
+        this->pmenu.render(*target);
     }
 }
 
@@ -63,8 +63,15 @@ void GameState::updateInput(const float& dt){
         this->player->move(-1.f, 0.f, dt);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("MOVE_RIGHT"))))
         this->player->move(1.f, 0.f, dt);
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("CLOSE"))))
-        this->endState();
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("CLOSE")))){
+        if(!this->paused){
+            this->pauseState();
+        }
+        else{
+            this->unpausedState();
+        }
+    }
+
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("INTERACT"))))
         this->player->interact(*this->player);
 }

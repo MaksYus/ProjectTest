@@ -1,6 +1,8 @@
 #ifndef GAMESTATE_H
 #define GAMESTATE_H
+
 #include "State.h"
+#include "PauseMenu.h"
 
 class GameState : public State
 {
@@ -15,6 +17,8 @@ class GameState : public State
     protected:
 
     private:
+        PauseMenu pmenu;
+
         Player *player;
 
         void initKeybinds();
